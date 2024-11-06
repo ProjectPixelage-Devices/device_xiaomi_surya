@@ -13,9 +13,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_surya
+# Pixelage Flags
+PIXELAGE_BUILD := surya
+PIXELAGE_BUILDTYPE := OFFICIAL
+PIXELAGE_MAINTAINER := BrainDead
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Gesture Flags
+TARGET_SUPPORTS_QUICK_TAP := true
+
+# Faceunlock Support Flag
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# GMS Flags
+WITH_GMS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_STOCK_AICORE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+
+PRODUCT_NAME := pixelage_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := M2007J20CG
