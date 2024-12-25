@@ -300,6 +300,10 @@ PRODUCT_PACKAGES += \
     SuryaSettingsProvider \
     SuryaWifiResources
 
+# NCM USB Tethering
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
